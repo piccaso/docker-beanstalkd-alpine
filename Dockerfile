@@ -1,20 +1,9 @@
-FROM alpine:3.6
-
-LABEL maintainer="Juliano Petronetto <juliano@petronetto.com.br>"
-LABEL org.label-schema.name="Beanstalkd Alpine" \
-      org.label-schema.description="Beanstalkd in Alpine Linux" \
-      org.label-schema.url="https://hub.docker.com/r/petronetto/beanstalkd-alpine/" \
-      org.label-schema.vcs-url="https://github.com/petronetto/beanstalkd-alpine" \
-      org.label-schema.vendor="Petroneto DevTech" \
-      org.label-schema.version="1.0" \
-      org.label-schema.schema-version="1.0"
-
-ENV VERSION_BEANSTALKD="1.10"
+FROM alpine:3.11
 
 RUN addgroup -S beanstalkd && adduser -S -G beanstalkd beanstalkd
 RUN apk add --no-cache 'su-exec>=0.2'
 
-RUN apk --update add beanstalkd && \
+RUN apk --update add --no-cache beanstalkd && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
   
