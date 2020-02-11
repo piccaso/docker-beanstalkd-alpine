@@ -1,8 +1,4 @@
 # Beanstalkd Alpine
-Beanstalkd Alpine
-
-[![](https://images.microbadger.com/badges/image/petronetto/beanstalkd-alpine:latest.svg)](https://microbadger.com/images/petronetto/beanstalkd-alpine:latest "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/petronetto/beanstalkd-alpine:latest.svg)](https://microbadger.com/images/petronetto/beanstalkd-alpine:latest "Get your own version badge on microbadger.com")
 
 # Options
 ```
@@ -25,12 +21,4 @@ Beanstalkd Alpine
 # Usage
 ```
 $ docker run -d -p 11300:11300 --name beanstalkd petronetto/beanstalkd-alpine 
-```
-
-# Console
-```
-docker run -d -p 2080:2080 \
-           --link beanstalkd \
-           --name beanstalk-console \
-           petronetto/beanstalkd-alpine:console
 ```
