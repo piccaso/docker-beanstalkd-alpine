@@ -20,5 +20,5 @@
 
 # Usage
 ```
-$ docker run -d -p 11300:11300 --name beanstalkd petronetto/beanstalkd-alpine 
+$ docker run -d -p 11300:11300 --name beanstalkd 0xff/beanstalkd-alpine
 ```
